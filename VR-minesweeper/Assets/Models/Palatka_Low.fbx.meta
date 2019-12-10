@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: 5bdddff1fad66264ea84ab7eb00697ae
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: osnova
+    100002: //RootNode
+    100004: shtora1
+    100006: shtora2
+    100008: shtora3
+    100010: shtora4
+    100012: shtora5
+    100014: shtora6
+    100016: "\u041F\u043B\u043E\u0441\u043A\u043E\u0441\u0442\u044C"
+    400000: osnova
+    400002: //RootNode
+    400004: shtora1
+    400006: shtora2
+    400008: shtora3
+    400010: shtora4
+    400012: shtora5
+    400014: shtora6
+    400016: "\u041F\u043B\u043E\u0441\u043A\u043E\u0441\u0442\u044C"
+    2100000: shtory.003
+    2100002: osnova.003
+    2100004: virezka.003
+    2100006: balki.003
+    2100008: krisha.003
+    2100010: prost.002
+    2300000: osnova
+    2300002: shtora1
+    2300004: shtora2
+    2300006: shtora3
+    2300008: shtora4
+    2300010: shtora5
+    2300012: shtora6
+    2300014: "\u041F\u043B\u043E\u0441\u043A\u043E\u0441\u0442\u044C"
+    3300000: osnova
+    3300002: shtora1
+    3300004: shtora2
+    3300006: shtora3
+    3300008: shtora4
+    3300010: shtora5
+    3300012: shtora6
+    3300014: "\u041F\u043B\u043E\u0441\u043A\u043E\u0441\u0442\u044C"
+    4300000: shtora6
+    4300002: shtora5
+    4300004: shtora4
+    4300006: shtora3
+    4300008: shtora2
+    4300010: shtora1
+    4300012: osnova
+    4300014: "\u041F\u043B\u043E\u0441\u043A\u043E\u0441\u0442\u044C"
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
