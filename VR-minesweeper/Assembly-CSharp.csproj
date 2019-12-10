@@ -655,12 +655,22 @@
       <Project>{3C0CC28F-7F0D-3243-B7F6-22619AF0A2CA}</Project>      <Name>Microsoft.MixedReality.Toolkit.Providers.WindowsVoiceInput</Name>    </ProjectReference>
     <ProjectReference Include="Microsoft.MixedReality.Toolkit.Gltf.csproj">
       <Project>{0C0A50AA-7E0C-BB45-B8BC-27955F8B53B1}</Project>      <Name>Microsoft.MixedReality.Toolkit.Gltf</Name>    </ProjectReference>
+    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Demos.Gltf.Inspectors.csproj">
+      <Project>{AAC4AB85-0F7E-84A4-957D-A173C6F62FBA}</Project>      <Name>Microsoft.MixedReality.Toolkit.Demos.Gltf.Inspectors</Name>    </ProjectReference>
+    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Demos.Gltf.csproj">
+      <Project>{EB552D41-85A9-156F-765C-A2726B40FDC1}</Project>      <Name>Microsoft.MixedReality.Toolkit.Demos.Gltf</Name>    </ProjectReference>
     <ProjectReference Include="Microsoft.MixedReality.Toolkit.Editor.ClassExtensions.csproj">
       <Project>{3B27478E-9239-634A-9307-DA23D9394BB7}</Project>      <Name>Microsoft.MixedReality.Toolkit.Editor.ClassExtensions</Name>    </ProjectReference>
+    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Demos.UX.Interactables.csproj">
+      <Project>{3DBFB496-465D-B8F1-E0A4-3235524B229A}</Project>      <Name>Microsoft.MixedReality.Toolkit.Demos.UX.Interactables</Name>    </ProjectReference>
     <ProjectReference Include="Microsoft.MixedReality.Toolkit.csproj">
       <Project>{22581282-7A28-3EAB-E8A9-95C7DBE8FB2E}</Project>      <Name>Microsoft.MixedReality.Toolkit</Name>    </ProjectReference>
+    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Demos.InspectorFields.Inspectors.csproj">
+      <Project>{61BA61F0-FF3E-6D77-A755-A7146780D672}</Project>      <Name>Microsoft.MixedReality.Toolkit.Demos.InspectorFields.Inspectors</Name>    </ProjectReference>
     <ProjectReference Include="Microsoft.MixedReality.Toolkit.SDK.Inspectors.csproj">
       <Project>{33753CD9-DFCE-8027-5A83-EE99D18D3FAB}</Project>      <Name>Microsoft.MixedReality.Toolkit.SDK.Inspectors</Name>    </ProjectReference>
+    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Examples.Editor.Inspectors.csproj">
+      <Project>{76E2A60A-FFD9-8469-1F5C-280CBF0D09A7}</Project>      <Name>Microsoft.MixedReality.Toolkit.Examples.Editor.Inspectors</Name>    </ProjectReference>
     <ProjectReference Include="Microsoft.MixedReality.Toolkit.Services.SpatialAwarenessSystem.csproj">
       <Project>{B965E5DD-A59A-86F0-A8A5-425A9066DE2F}</Project>      <Name>Microsoft.MixedReality.Toolkit.Services.SpatialAwarenessSystem</Name>    </ProjectReference>
     <ProjectReference Include="Microsoft.MixedReality.Toolkit.Services.InputSimulation.Editor.csproj">
@@ -691,24 +701,14 @@
       <Project>{1DA285D4-7296-C520-512B-63F28D67CB88}</Project>      <Name>Microsoft.MixedReality.Toolkit.Editor.Utilities</Name>    </ProjectReference>
     <ProjectReference Include="Microsoft.MixedReality.Toolkit.Services.BoundarySystem.csproj">
       <Project>{EE909145-83DF-9F1C-8270-891235D3593D}</Project>      <Name>Microsoft.MixedReality.Toolkit.Services.BoundarySystem</Name>    </ProjectReference>
-    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Services.InputSimulation.csproj">
-      <Project>{092D13AA-3D7E-48A8-0853-AB60191FA0FC}</Project>      <Name>Microsoft.MixedReality.Toolkit.Services.InputSimulation</Name>    </ProjectReference>
-    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Demos.Gltf.Inspectors.csproj">
-      <Project>{AAC4AB85-0F7E-84A4-957D-A173C6F62FBA}</Project>      <Name>Microsoft.MixedReality.Toolkit.Demos.Gltf.Inspectors</Name>    </ProjectReference>
-    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Demos.Gltf.csproj">
-      <Project>{EB552D41-85A9-156F-765C-A2726B40FDC1}</Project>      <Name>Microsoft.MixedReality.Toolkit.Demos.Gltf</Name>    </ProjectReference>
-    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Demos.UX.Interactables.csproj">
-      <Project>{3DBFB496-465D-B8F1-E0A4-3235524B229A}</Project>      <Name>Microsoft.MixedReality.Toolkit.Demos.UX.Interactables</Name>    </ProjectReference>
-    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Demos.InspectorFields.Inspectors.csproj">
-      <Project>{61BA61F0-FF3E-6D77-A755-A7146780D672}</Project>      <Name>Microsoft.MixedReality.Toolkit.Demos.InspectorFields.Inspectors</Name>    </ProjectReference>
-    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Examples.Editor.Inspectors.csproj">
-      <Project>{76E2A60A-FFD9-8469-1F5C-280CBF0D09A7}</Project>      <Name>Microsoft.MixedReality.Toolkit.Examples.Editor.Inspectors</Name>    </ProjectReference>
     <ProjectReference Include="Microsoft.MixedReality.Toolkit.Demos.InspectorFields.csproj">
       <Project>{2CD62E8D-B2A6-5764-3985-18B321DF2FDD}</Project>      <Name>Microsoft.MixedReality.Toolkit.Demos.InspectorFields</Name>    </ProjectReference>
     <ProjectReference Include="Microsoft.MixedReality.Toolkit.Demos.StandardShader.Inspectors.csproj">
       <Project>{FED5839B-3452-42C4-8869-410EC729EC03}</Project>      <Name>Microsoft.MixedReality.Toolkit.Demos.StandardShader.Inspectors</Name>    </ProjectReference>
     <ProjectReference Include="Microsoft.MixedReality.Toolkit.Examples.csproj">
       <Project>{4E2FC919-44AA-3F07-51A8-D5795F9DF7FB}</Project>      <Name>Microsoft.MixedReality.Toolkit.Examples</Name>    </ProjectReference>
+    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Services.InputSimulation.csproj">
+      <Project>{092D13AA-3D7E-48A8-0853-AB60191FA0FC}</Project>      <Name>Microsoft.MixedReality.Toolkit.Services.InputSimulation</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
