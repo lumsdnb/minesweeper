@@ -1,60 +1,32 @@
 fileFormatVersion: 2
-guid: d1e9c04975679994589e5d83869033d4
+guid: 4cd810ce044141e45a2323bd71c2aa10
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: body
-    100002: body bottom
-    100004: Camera
-    100006: firingpin
+    100000: Camera
+    100002: cross
+    100004: Light
+    100006: Light.001
     100008: //RootNode
-    100010: nail
-    100012: plate spring
-    100014: release latch
-    100016: rubber trigger
-    100018: spring
-    400000: body
-    400002: body bottom
-    400004: Camera
-    400006: firingpin
+    100010: stick
+    400000: Camera
+    400002: cross
+    400004: Light
+    400006: Light.001
     400008: //RootNode
-    400010: nail
-    400012: plate spring
-    400014: release latch
-    400016: rubber trigger
-    400018: spring
+    400010: stick
     2000000: Camera
-    2100000: body
-    2100002: rubber
-    2100004: trig
-    2100006: spring
-    2100008: tnt
-    2100010: No Name
-    2300000: body
-    2300002: body bottom
-    2300004: firingpin
-    2300006: nail
-    2300008: plate spring
-    2300010: release latch
-    2300012: rubber trigger
-    2300014: spring
-    3300000: body
-    3300002: body bottom
-    3300004: firingpin
-    3300006: nail
-    3300008: plate spring
-    3300010: release latch
-    3300012: rubber trigger
-    3300014: spring
-    4300000: body
-    4300002: rubber trigger
-    4300004: firingpin
-    4300006: plate spring
-    4300008: body bottom
-    4300010: nail
-    4300012: spring
-    4300014: release latch
-    2186277476908879412: ImportLogs
+    2100000: metal
+    2100002: handle
+    2100004: No Name
+    2300000: cross
+    2300002: stick
+    3300000: cross
+    3300002: stick
+    4300000: stick
+    4300002: cross
+    10800000: Light
+    10800002: Light.001
   externalObjects: {}
   materials:
     importMaterials: 1
