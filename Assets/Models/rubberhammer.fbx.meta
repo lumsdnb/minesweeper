@@ -1,23 +1,31 @@
 fileFormatVersion: 2
-guid: 1da3d11a595f1d84dba0701895b6842a
+guid: d9360b8970425b24d93c8f973b8a3dbb
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Camera
     100002: Cube
     100004: Light
-    100006: //RootNode
+    100006: Light.001
+    100008: //RootNode
+    100010: stick
     400000: Camera
     400002: Cube
     400004: Light
-    400006: //RootNode
+    400006: Light.001
+    400008: //RootNode
+    400010: stick
     2000000: Camera
-    2100000: screwdriver_stick
-    2100002: screwdriver_handle
+    2100000: handle
+    2100002: No Name
     2300000: Cube
+    2300002: stick
     3300000: Cube
-    4300000: Cube
+    3300002: stick
+    4300000: stick
+    4300002: Cube
     10800000: Light
+    10800002: Light.001
   externalObjects: {}
   materials:
     importMaterials: 1

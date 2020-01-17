@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class ToolSwitchReceiver : MonoBehaviour
 {
-    private int toolID = 1;
-    public GameObject detector;
-    public GameObject stick;
+    public int toolID = 1;
+    public GameObject hammer;
     public GameObject screwdriver;
-    public GameObject knife;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,31 +21,18 @@ public class ToolSwitchReceiver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float axisX = Input.GetAxis("AXIS_1");
+        float axisY = Input.GetAxis("AXIS_4");
+        Debug.Log(axisX);
         switch (toolID)
         {
         case 1:
-            detector.SetActive(true);
-            stick.SetActive(false);
+            hammer.SetActive(true);
             screwdriver.SetActive(false);
-            knife.SetActive(false);
             break;
         case 2:
-            detector.SetActive(false);
-            stick.SetActive(true);
-            screwdriver.SetActive(false);
-            knife.SetActive(false);
-            break;
-        case 3:
-            detector.SetActive(false);
-            stick.SetActive(false);
+            hammer.SetActive(false);
             screwdriver.SetActive(true);
-            knife.SetActive(false);
-            break;
-        case 4:
-            detector.SetActive(false);
-            stick.SetActive(false);
-            screwdriver.SetActive(false);
-            knife.SetActive(true);
             break;
         default:
             break;
