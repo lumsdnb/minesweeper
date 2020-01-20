@@ -16,15 +16,13 @@ public class ScrewThis : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //assign screwdriver to var
-        screwdriver = GameObject.FindWithTag("screwdriver");
     }
 
     void OnTriggerStay(Collider other)
     {
         if(other.gameObject.tag == "screwdriver")
         {
-            rotVec = new Vector3(0,0,screwdriver.transform.localRotation.eulerAngles.z);
+            rotVec = new Vector3(0,0,prevAngle + screwdriver.transform.localRotation.eulerAngles.z);
             //angleRotated = screwdriver.transform.rotation.eulerAngles.z;
             //angleRotated = angleRotated + rotVec.z;
             Debug.Log("angle: " + rotVec + "rotations: " + rotations);
@@ -32,9 +30,18 @@ public class ScrewThis : MonoBehaviour
         } 
     }
 
+    void OnTriggerExit(Collider other)
+    {
+        // store angle
+        prevAngle = transform.localRotation.eulerAngles.y;
+    }
+
     void Update()
     {
-        prevAngle = rotVec.z; 
+        //assign screwdriver to var
+        screwdriver = GameObject.FindWithTag("screwdriver");
+
+        // prevAngle = rotVec.z; 
         //rotate exact amount in degrees
         transform.localRotation = Quaternion.Euler(0,rotVec.z,0);
         //if rotation goes past 360 ie back to 0
@@ -49,7 +56,7 @@ public class ScrewThis : MonoBehaviour
         if (rotVec.z > 270)
         {
             //screw falls out after x degrees of unscrewing
-            gameObject.GetComponent<Rigidbody>().useGravity = true;
+            //gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
     }
 }

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1112559439157597068}
   - component: {fileID: 1112559439156498764}
   - component: {fileID: 114065381202941636}
+  - component: {fileID: 6032908901765560095}
   m_Layer: 0
   m_Name: screwdriver
-  m_TagString: Untagged
+  m_TagString: screwdriver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,3 +99,16 @@ MonoBehaviour:
     id: 0
     description: None
     axisConstraint: 0
+--- !u!65 &6032908901765560095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112559439154302852}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023236893, y: 0.023228437, z: 0.0011854391}
+  m_Center: {x: -0.0000009896855, y: -0.0000034694872, z: -0.009407275}
