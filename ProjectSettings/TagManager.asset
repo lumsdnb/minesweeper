@@ -6,6 +6,7 @@ TagManager:
   tags:
   - screwdriver
   - hammer
+  - mine
   layers:
   - Default
   - TransparentFX
