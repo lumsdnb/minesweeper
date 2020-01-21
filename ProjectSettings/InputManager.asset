@@ -294,6 +294,38 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
+    m_Name: VRLEFT
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.19
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 16
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: VRRIGHT
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0.19
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 18
+    joyNum: 0
+  - serializedVersion: 3
     m_Name: AXIS_1
     descriptiveName: 
     descriptiveNegativeName: 
@@ -550,7 +582,7 @@ InputManager:
     axis: 15
     joyNum: 0
   - serializedVersion: 3
-    m_Name: VRLEFT
+    m_Name: AXIS_17
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -582,7 +614,7 @@ InputManager:
     axis: 17
     joyNum: 0
   - serializedVersion: 3
-    m_Name: VRRIGHT
+    m_Name: AXIS_19
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -772,68 +804,4 @@ InputManager:
     invert: 0
     type: 2
     axis: 2
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: AXIS_17
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 0
-    type: 2
-    axis: 16
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: AXIS_19
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 0
-    type: 2
-    axis: 18
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: AXIS_17
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 0
-    type: 2
-    axis: 16
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: AXIS_19
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
-    altNegativeButton: 
-    altPositiveButton: 
-    gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 0
-    type: 2
-    axis: 18
     joyNum: 0
