@@ -7,6 +7,7 @@ TagManager:
   - screwdriver
   - hammer
   - mine
+  - mineMainObject
   layers:
   - Default
   - TransparentFX

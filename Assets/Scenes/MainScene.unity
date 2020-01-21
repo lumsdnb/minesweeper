@@ -393,6 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Explosion: {fileID: 5411224728556907580, guid: a4c14bdc6fba33e44ab225f398c029a0,
     type: 3}
+  alreadyExploded: 0
 --- !u!1 &102029698 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100028, guid: 031a69f456849884b9c68bbed16a82b1,
@@ -2002,6 +2003,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600323164232348275, guid: 60458bee4188e3342a17c5fcbc350878,
+        type: 3}
+      propertyPath: m_TagString
+      value: mineMainObject
       objectReference: {fileID: 0}
     - target: {fileID: 7600323164232117843, guid: 60458bee4188e3342a17c5fcbc350878,
         type: 3}
