@@ -17,13 +17,13 @@ public class ScrewThis : MonoBehaviour
     void Start()
     {
         //assign screwdriver to var
+        screwdriver = GameObject.FindWithTag("screwdriver");
     }
 
     void OnTriggerStay(Collider other)
     {
         if(other.gameObject.tag == "screwdriver")
         {
-            Debug.Log("hee");
             rotVec = new Vector3(0,0,screwdriver.transform.localRotation.eulerAngles.z);
             //angleRotated = screwdriver.transform.rotation.eulerAngles.z;
             //angleRotated = angleRotated + rotVec.z;
@@ -34,7 +34,6 @@ public class ScrewThis : MonoBehaviour
 
     void Update()
     {
-        screwdriver = GameObject.FindWithTag("screwdriver");
         prevAngle = rotVec.z; 
         //rotate exact amount in degrees
         transform.localRotation = Quaternion.Euler(0,rotVec.z,0);
