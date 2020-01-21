@@ -9330,8 +9330,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionTime: 0
   randomizeExplosionTime: 0
-  radius: 15
-  power: 1.7
+  radius: 5000
+  power: 500
   probeCount: 150
   explodeDuration: 0.5
 --- !u!114 &5411224730384494845
