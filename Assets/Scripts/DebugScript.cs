@@ -7,7 +7,7 @@ public class DebugScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     public void OnTriggered()
@@ -18,6 +18,6 @@ public class DebugScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
