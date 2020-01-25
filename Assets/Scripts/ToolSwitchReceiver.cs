@@ -14,7 +14,7 @@ public class ToolSwitchReceiver : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
         switch (toolID)
         {
