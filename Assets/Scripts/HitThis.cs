@@ -38,7 +38,6 @@ public class HitThis : MonoBehaviour
 
     void Update()
     {
-
         switch (amtHit)
         {
         case 1:
@@ -47,10 +46,13 @@ public class HitThis : MonoBehaviour
             break;
         case 2:
             Debug.Log("second hit");
+            nail.GetComponent<Rigidbody>().useGravity = true;
             spring.GetComponent<Rigidbody>().useGravity = true;
             break;
         case 3:
             Debug.Log("third hit");
+            nail.GetComponent<Rigidbody>().useGravity = true;
+            spring.GetComponent<Rigidbody>().useGravity = true;
             fuse.GetComponent<Rigidbody>().useGravity = true;
             break;
         default:
