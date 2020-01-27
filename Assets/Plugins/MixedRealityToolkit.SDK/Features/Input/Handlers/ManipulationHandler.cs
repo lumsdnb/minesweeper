@@ -79,7 +79,7 @@ namespace Microsoft.MixedReality.Toolkit.UI
 
         [SerializeField]
         [Tooltip("What manipulation will two hands perform?")]
-        private TwoHandedManipulation twoHandedManipulationType = TwoHandedManipulation.MoveRotateScale;
+        private TwoHandedManipulation twoHandedManipulationType = TwoHandedManipulation.MoveRotate;
         
         public TwoHandedManipulation TwoHandedManipulationType
         {

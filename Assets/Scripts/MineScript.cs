@@ -8,7 +8,6 @@ public class MineScript : MonoBehaviour
 
     public GameObject screw1;
     public GameObject screw2;
-    public GameObject fuse;
     public int mineState=0;
 
     public void setState(int state)
