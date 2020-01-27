@@ -5,6 +5,14 @@ using UnityEngine;
 public class ScrewThisPhysics : MonoBehaviour
 {
     public bool unscrewed = false;
+    public int screwNum = 0;
+    public GameObject mine;
+    MineScript ReferenceScript;
+
+    void Start()
+    {
+        ReferenceScript = mine.GetComponent<MineScript>();
+    }
 
     void LateUpdate()
     {
@@ -14,13 +22,18 @@ public class ScrewThisPhysics : MonoBehaviour
             gameObject.GetComponent<Rigidbody>().useGravity = false;
         }
         
+        if(unscrewed==true)
+        {
+            //screw falls out after x degrees of unscrewing
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
+            ReferenceScript.setState(screwNum);
+        }
+
         // Debug.Log(transform.localEulerAngles.y);
         
         if (transform.localEulerAngles.y > 180 && transform.localEulerAngles.y < 230)
         {
             unscrewed = true;
-            //screw falls out after x degrees of unscrewing
-            gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
     }
 }

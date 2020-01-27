@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unscrewed: 0
+  screwNum: 2
+  mine: {fileID: 2946129645605433177}
 --- !u!54 &5072106015105948150
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -160,6 +162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unscrewed: 0
+  screwNum: 1
+  mine: {fileID: 2946129645605433177}
 --- !u!1 &2946129645605433163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,7 +1008,7 @@ GameObject:
   - component: {fileID: 6428242004019261567}
   - component: {fileID: 348373779650630769}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1417,7 +1421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 99c2dbfcb3ed1e045bfe849af6c8762c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 99c2dbfcb3ed1e045bfe849af6c8762c, type: 3}
       propertyPath: m_LocalPosition.x

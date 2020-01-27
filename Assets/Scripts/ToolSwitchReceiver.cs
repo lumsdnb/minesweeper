@@ -21,14 +21,17 @@ public class ToolSwitchReceiver : MonoBehaviour
         case 0:
             hammer.SetActive(false);
             screwdriver.SetActive(false);
+            Debug.Log("no tool");
             break;
         case 1:
             hammer.SetActive(true);
             screwdriver.SetActive(false);
+            Debug.Log("tool dos");
             break;
         case 2:
             hammer.SetActive(false);
             screwdriver.SetActive(true);
+            Debug.Log("tool tres");
             break;
         default:
             break;
