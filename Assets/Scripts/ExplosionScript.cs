@@ -7,6 +7,7 @@ public class ExplosionScript : MonoBehaviour
 
     public GameObject Explosion;
     public bool alreadyExploded = false;
+    public float radius;
     GameObject Mine;
     MineScript ReferenceScript;
     // Start is called before the first frame update
@@ -35,7 +36,11 @@ public class ExplosionScript : MonoBehaviour
                         Debug.Log("Explosion!");
                         Instantiate(Explosion, new Vector3(-0.2f, 3.8f, 3.1f), Quaternion.identity, Explosion.transform.parent);
                         Explosion.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+                        
+                        Vector3 explosionPos = transform.position;
+                        Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
                         alreadyExploded = true;
+
                     }
                     Debug.Log("Already Exploded!");
                 }
