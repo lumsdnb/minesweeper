@@ -10,6 +10,7 @@ public class Exploder : MonoBehaviour {
 	public float power = 1;
 	public int probeCount = 150;
 	public float explodeDuration = 0.5f;
+	public bool blowUp = false;
 
 	protected bool exploded = false;
 	
@@ -20,7 +21,7 @@ public class Exploder : MonoBehaviour {
 				component.onExplosionStarted(this);
 			}
 		}		
-		while (explodeDuration > Time.time - explosionTime) {
+		while (blowUp == false) {
 			disableCollider();
 			for (int i = 0; i < probeCount; i++) {
 				shootFromCurrentPosition();
@@ -64,7 +65,7 @@ public class Exploder : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		if (Time.time > explosionTime && !exploded) {
+		if (blowUp == true) {
 			exploded = true;
 			StartCoroutine("explode");
 		}
