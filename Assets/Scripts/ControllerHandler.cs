@@ -21,12 +21,12 @@ public class ControllerHandler : MonoBehaviour
     {
         foreach(IMixedRealityController controller in InputSystem.DetectedControllers)
         {
-            // if(controller.ControllerHandedness.IsRight())
-            // {
+            if(controller.ControllerHandedness.IsRight())
+            {
                 transform.position = controller.InputSource.Pointers[0].Position;
                 transform.rotation = controller.InputSource.Pointers[0].Rotation;                
             Debug.Log(controller.InputSource.Pointers[0].Position);
-            // }
+            }
         }
     }
 }
