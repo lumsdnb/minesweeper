@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class ToolSwitchReceiver : MonoBehaviour
 {
-    public int toolID = 0;
+    private int toolID = 0;
     public GameObject hammer;
     public GameObject screwdriver;
+    public GameObject defaultHand;
 
     public void pickTool(int i)
     {
         toolID=i;
     }
 
-    // Update is called once per frame
     void Update()
     {
         switch (toolID)
@@ -21,16 +21,19 @@ public class ToolSwitchReceiver : MonoBehaviour
         case 0:
             hammer.SetActive(false);
             screwdriver.SetActive(false);
+            defaultHand.SetActive(true);
             Debug.Log("no tool");
             break;
         case 1:
             hammer.SetActive(true);
             screwdriver.SetActive(false);
+            defaultHand.SetActive(true);
             Debug.Log("tool dos");
             break;
         case 2:
             hammer.SetActive(false);
             screwdriver.SetActive(true);
+            defaultHand.SetActive(true);
             Debug.Log("tool tres");
             break;
         default:
