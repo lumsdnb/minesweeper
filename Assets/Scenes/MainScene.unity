@@ -4117,12 +4117,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 597246892}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &448200930 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2946129645605433179, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1571087775}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &463203868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 83082b22490d6fa47901a54d4f47d537,
@@ -7269,65 +7263,12 @@ Transform:
   m_Father: {fileID: 906507526}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &891348725
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!135 &891348729 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 3903186155665932839, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1571087775}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 891348726}
-  - component: {fileID: 891348728}
-  - component: {fileID: 891348727}
-  m_Layer: 0
-  m_Name: Physics FX
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &891348726
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891348725}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.21, y: 0.21, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1387379696}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &891348727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891348725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f099e7bc40c54e4b8cf7bcd90150428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 3
-  power: 7
---- !u!114 &891348728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891348725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f4cbe5ffc63ffa4c908d8512b62f83d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  motherObject: {fileID: 448200930}
 --- !u!1 &892900274
 GameObject:
   m_ObjectHideFlags: 0
@@ -11120,7 +11061,6 @@ Transform:
   m_Children:
   - {fileID: 152742939}
   - {fileID: 125096256}
-  - {fileID: 891348726}
   m_Father: {fileID: 141679144}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12847,10 +12787,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2755506684958253526, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
         type: 3}
-      propertyPath: profiles.Array.data[0].Themes.Array.data[0]
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: ce58007a668e3214abb10622861eb3aa,
-        type: 2}
+      objectReference: {fileID: 891348729}
+    - target: {fileID: 2755506684958253526, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0265cfddbe04f9b42aa923f32e4a84e4, type: 3}
 --- !u!1 &1589175991
