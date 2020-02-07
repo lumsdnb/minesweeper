@@ -10,6 +10,8 @@ public class MineScript : MonoBehaviour
     public GameObject screw2;
     public int mineState=0;
 
+    
+
     public void setState(int state)
     {
         mineState = state;

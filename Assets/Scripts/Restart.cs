@@ -8,7 +8,8 @@ public class restart : MonoBehaviour
  
  void Update () {
      if (Input.GetKeyDown("r")) { //If you press R
-         SceneManager.LoadScene("MainScene"); //Load scene called Game
-     }
+                                  //SceneManager.LoadScene("MainScene"); //Load scene called Game
+           
+        }
  }
 }
