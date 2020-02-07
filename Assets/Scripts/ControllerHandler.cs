@@ -25,7 +25,7 @@ public class ControllerHandler : MonoBehaviour
             {
                 transform.position = controller.InputSource.Pointers[0].Position;
                 transform.rotation = controller.InputSource.Pointers[0].Rotation;                
-            Debug.Log(controller.InputSource.Pointers[0].Position);
+            // Debug.Log(controller.InputSource.Pointers[0].Position);
             }
         }
     }
