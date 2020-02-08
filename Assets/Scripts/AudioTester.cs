@@ -19,7 +19,7 @@ public class AudioTester : MonoBehaviour
     void Start()
     {
         //audio = GetComponent<AudioSource>();
-        SceneLogic.StartGameAction.Invoke();
+        //SceneLogic.StartGameAction.Invoke();
     }
 
     

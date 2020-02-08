@@ -16,15 +16,18 @@ public class SceneLogic : MonoBehaviour
 
     public GameObject PlayerTrigger;
 
-    public AudioClip StartGame;
-    public AudioClip SuitOn;
-    public AudioClip WorkbenchArrived;
-    public AudioClip ScrewOne;
-    public AudioClip ScrewTwo;
-    public AudioClip GameOver;
+    public AudioClip StartGame; //1
+    public AudioClip SuitOn; //2
+    public AudioClip WorkbenchPosition; //3
+    public AudioClip ScrewOne; //4 //5
+    public AudioClip ScrewTwo; // 6
+    public AudioClip GameOver; //explosion?
 
-    private AudioSource screwOneSource;
-    private AudioSource screwTwoSource;
+    private AudioSource clipToPlay;
+
+    private int mineStateOneHappened;
+    private int mineStateTwoHappened;
+    private int mineStateThreeHappened;
 
 
     private void Awake()
@@ -36,9 +39,11 @@ public class SceneLogic : MonoBehaviour
         ScrewTwoAction += ScrewTwoFunction;
         GameOverAction += GameOverFunction;
 
+        SceneLogic.StartGameAction.Invoke();
 
-        screwOneSource = SetupAudioSourceFor(PlayerTrigger, ScrewOne);
-        screwTwoSource = SetupAudioSourceFor(PlayerTrigger, ScrewTwo);
+        mineStateOneHappened = 0;
+        mineStateTwoHappened = 0;
+        mineStateThreeHappened = 0;
 
 
     }
@@ -55,7 +60,7 @@ public class SceneLogic : MonoBehaviour
     {
         AudioSource result = target.AddComponent<AudioSource>();
         result.clip = clip;
-        result.clip = ScrewOne;
+        //result.clip = StartGame;
         result.playOnAwake = false;
         result.loop = false;
         result.spatialize = true;
@@ -71,27 +76,45 @@ public class SceneLogic : MonoBehaviour
     private void StartGameFunction()
     {
         Debug.Log("StartGameAction received");
-
-        screwOneSource.Play();
+        clipToPlay = SetupAudioSourceFor(PlayerTrigger, StartGame);
+        clipToPlay.Play();
     }
     private void SuitOnFunction()
     {
         Debug.Log("SuitOnAction received");
+        clipToPlay = SetupAudioSourceFor(PlayerTrigger, SuitOn);
+        clipToPlay.Play();
+
     }
     private void WorkbenchPositionFunction()
     {
         Debug.Log("WorkbenchPositionAction received");
+        clipToPlay = SetupAudioSourceFor(PlayerTrigger, WorkbenchPosition);
+        clipToPlay.Play();
     }
     private void ScrewOneFunction()
     {
         Debug.Log("ScrewOneAction received");
+        if (mineStateOneHappened.Equals(0)) { 
+        clipToPlay = SetupAudioSourceFor(PlayerTrigger, ScrewOne);
+        clipToPlay.Play();
+        mineStateOneHappened = 1;
+        }
     }
     private void ScrewTwoFunction()
     {
         Debug.Log("ScrewTwoAction received");
+        if (mineStateThreeHappened.Equals(0))
+        {
+            clipToPlay = SetupAudioSourceFor(PlayerTrigger, ScrewTwo);
+            clipToPlay.Play();
+            mineStateThreeHappened = 1;
+        }
     }
     private void GameOverFunction()
     {
         Debug.Log("GameOverAction received");
+        clipToPlay = SetupAudioSourceFor(PlayerTrigger, GameOver);
+        clipToPlay.Play();
     }
 }

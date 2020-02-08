@@ -7907,6 +7907,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1883483808967216603, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
+        type: 3}
+      propertyPath: m_Name
+      value: SceneLogic
+      objectReference: {fileID: 0}
     - target: {fileID: 114958296526678812, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
         type: 3}
       propertyPath: ScrewOne
@@ -7916,7 +7921,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ScrewTwo
       value: 
-      objectReference: {fileID: 8300000, guid: 60ad301a473e0704e988aebd0dba25c3, type: 3}
+      objectReference: {fileID: 8300000, guid: 8969f13c694922b4caaad2cf715a4ec7, type: 3}
     - target: {fileID: 114958296526678812, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
         type: 3}
       propertyPath: StartGame
@@ -7937,11 +7942,16 @@ PrefabInstance:
       propertyPath: PlayerTrigger
       value: 
       objectReference: {fileID: 1493826742}
-    - target: {fileID: 1883483808967216603, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
+    - target: {fileID: 114958296526678812, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
         type: 3}
-      propertyPath: m_Name
-      value: SceneLogic
-      objectReference: {fileID: 0}
+      propertyPath: GameOver
+      value: 
+      objectReference: {fileID: 8300000, guid: a41a65c459891d345a0e2c5107c4c858, type: 3}
+    - target: {fileID: 114958296526678812, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
+        type: 3}
+      propertyPath: WorkbenchPosition
+      value: 
+      objectReference: {fileID: 8300000, guid: f1a5a7dcba243814388de61f54ca2c81, type: 3}
     - target: {fileID: 5224856890425985659, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19449,6 +19459,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201173605449843846, guid: ddf5c59c0dd09b74e92387819300c31e,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9201173605449843844, guid: ddf5c59c0dd09b74e92387819300c31e, type: 3}

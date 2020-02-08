@@ -25,15 +25,17 @@ public class MineScript : MonoBehaviour
         case 1:
             //first screw removed
             screw1.SetActive(false);
-            break;
+                SceneLogic.ScrewOneAction.Invoke();
+                break;
         case 2:
             //second screw removed
             screw2.SetActive(false);
             break;
         case 3:
-            //mine hit 3 times with hammer
-            //todo: turn on rigidbody for fuse
-            break;
+                //mine hit 3 times with hammer
+                //todo: turn on rigidbody for fuse
+                SceneLogic.ScrewTwoAction.Invoke();
+                break;
             default:
             break;
         }
