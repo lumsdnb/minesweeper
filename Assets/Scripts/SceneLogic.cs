@@ -31,6 +31,7 @@ public class SceneLogic : MonoBehaviour
     private int mineStateTwoHappened;
     private int mineStateThreeHappened;
 
+    private bool checkPos = false;
 
     private void Awake()
     {
@@ -73,7 +74,14 @@ public class SceneLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (checkPos==true)
+        {
+            if (PlayerTrigger.transform.position.z>=5 && PlayerTrigger.transform.position.x<=1.15)
+            {
+                SceneLogic.WorkbenchPositionAction.Invoke();
+                checkPos = false;    
+            }
+        }
     }
     private void StartGameFunction()
     {
@@ -84,21 +92,24 @@ public class SceneLogic : MonoBehaviour
     private void SuitOnFunction()
     {
         Debug.Log("SuitOnAction received");
+        clipToPlay.Stop();
         clipToPlay = SetupAudioSourceFor(PlayerTrigger, SuitOn);
         clipToPlay.Play();
         securityHelmet.SetActive(true);
         securityGear.SetActive(false);
-
+        checkPos = true;
     }
     private void WorkbenchPositionFunction()
     {
         Debug.Log("WorkbenchPositionAction received");
+        clipToPlay.Stop();
         clipToPlay = SetupAudioSourceFor(PlayerTrigger, WorkbenchPosition);
         clipToPlay.Play();
     }
     private void ScrewOneFunction()
     {
         Debug.Log("ScrewOneAction received");
+        clipToPlay.Stop();
         if (mineStateOneHappened.Equals(0)) { 
         clipToPlay = SetupAudioSourceFor(PlayerTrigger, ScrewOne);
         clipToPlay.Play();
@@ -108,6 +119,7 @@ public class SceneLogic : MonoBehaviour
     private void ScrewTwoFunction()
     {
         Debug.Log("ScrewTwoAction received");
+        clipToPlay.Stop();
         if (mineStateThreeHappened.Equals(0))
         {
             clipToPlay = SetupAudioSourceFor(PlayerTrigger, ScrewTwo);
@@ -118,6 +130,7 @@ public class SceneLogic : MonoBehaviour
     private void GameOverFunction()
     {
         Debug.Log("GameOverAction received");
+        clipToPlay.Stop();
         clipToPlay = SetupAudioSourceFor(PlayerTrigger, GameOver);
         clipToPlay.Play();
     }

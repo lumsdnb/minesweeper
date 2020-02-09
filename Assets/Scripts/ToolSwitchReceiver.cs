@@ -9,6 +9,7 @@ public class ToolSwitchReceiver : MonoBehaviour
     public GameObject screwdriver;
     public GameObject defaultHand;
     public GameObject securityGear;
+    
 
     public void pickTool(int i)
     {
@@ -17,10 +18,6 @@ public class ToolSwitchReceiver : MonoBehaviour
 
     void Update()
     {
-        // if (Input.GetAxisRaw("AXIS_12") != 0)
-        // {
-        //     toolID=0;
-        // }
         if (Input.GetAxis("AXIS_12") == 1)
         {
             toolID = 0;
