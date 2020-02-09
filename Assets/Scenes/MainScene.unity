@@ -2902,6 +2902,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5830883818182992473, guid: 59bab27f84bcb9f48ab7fb423a9148fe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7604588621957804803, guid: 59bab27f84bcb9f48ab7fb423a9148fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2987,11 +2992,6 @@ PrefabInstance:
       propertyPath: sceneLogic
       value: 
       objectReference: {fileID: 1454166229}
-    - target: {fileID: 5830883818182992473, guid: 59bab27f84bcb9f48ab7fb423a9148fe,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7100244180269351186, guid: 59bab27f84bcb9f48ab7fb423a9148fe,
         type: 3}
       propertyPath: m_Layer
@@ -7845,7 +7845,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ScrewOne
       value: 
-      objectReference: {fileID: 8300000, guid: 608cbcc7c7f8cad4ca01342e2346b4ef, type: 3}
+      objectReference: {fileID: 8300000, guid: 8d7840ff73e59d54bb9d5bf5365594a1, type: 3}
     - target: {fileID: 114958296526678812, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
         type: 3}
       propertyPath: ScrewTwo
@@ -7875,7 +7875,7 @@ PrefabInstance:
         type: 3}
       propertyPath: GameOver
       value: 
-      objectReference: {fileID: 8300000, guid: e0c0649635424754bbb8123af5c6496d, type: 3}
+      objectReference: {fileID: 8300000, guid: 13acab41f351cf94bbe8fe780e42a7ba, type: 3}
     - target: {fileID: 114958296526678812, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
         type: 3}
       propertyPath: WorkbenchPosition
@@ -18311,6 +18311,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1935911383659009028, guid: 34e96964e709d3847956e5b233cb83c7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1935911383659366438, guid: 34e96964e709d3847956e5b233cb83c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18395,11 +18400,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1935911383659009028, guid: 34e96964e709d3847956e5b233cb83c7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e96964e709d3847956e5b233cb83c7, type: 3}
@@ -19088,12 +19088,17 @@ PrefabInstance:
     - target: {fileID: 9201173605449843847, guid: ddf5c59c0dd09b74e92387819300c31e,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9201173605449843846, guid: ddf5c59c0dd09b74e92387819300c31e,
         type: 3}
       propertyPath: m_Volume
-      value: 0.7
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201173605449843846, guid: ddf5c59c0dd09b74e92387819300c31e,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9201173605449843844, guid: ddf5c59c0dd09b74e92387819300c31e, type: 3}

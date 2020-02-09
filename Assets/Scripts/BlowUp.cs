@@ -27,6 +27,7 @@ public class BlowUp : MonoBehaviour
     IEnumerator BombCoroutine()
     {
         ps.Play();
+        SceneLogic.GameOverAction.Invoke();
         boomCollider.enabled = true;
         
 

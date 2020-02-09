@@ -34,6 +34,9 @@ public class SceneLogic : MonoBehaviour
     private int mineStateOneHappened;
     private int mineStateTwoHappened;
     private int mineStateThreeHappened;
+    private int mineExploded;
+    private int weNeedLouderExplosions;
+
 
     private void Awake()
     {
@@ -49,9 +52,10 @@ public class SceneLogic : MonoBehaviour
         mineStateOneHappened = 0;
         mineStateTwoHappened = 0;
         mineStateThreeHappened = 0;
+        mineExploded = 0;
 
 
-    }
+}
 
     private AudioSource SetupAudioSourceFor(GameObject target, AudioClip clip)
     {
@@ -61,6 +65,7 @@ public class SceneLogic : MonoBehaviour
         result.playOnAwake = false;
         result.loop = false;
         result.spatialize = true;
+
 
         return result;
     }
@@ -105,12 +110,21 @@ public class SceneLogic : MonoBehaviour
     private void ScrewOneFunction()
     {
         Debug.Log("ScrewOneAction received");
-        clipToPlay.Stop();
-        if (mineStateOneHappened.Equals(0)) { 
-        clipToPlay = SetupAudioSourceFor(PlayerTrigger, ScrewOne);
-        clipToPlay.Play();
-        mineStateOneHappened = 1;
-        gameState = 3;
+
+        if (mineStateOneHappened.Equals(0))
+        {
+            if (mineExploded.Equals(0))
+            {
+                clipToPlay.Stop();
+                clipToPlay = SetupAudioSourceFor(PlayerTrigger, ScrewOne);
+                clipToPlay.Play();
+                mineStateOneHappened = 1;
+                gameState = 3;
+            }
+        }
+        if (mineExploded.Equals(1))
+        {
+            Debug.Log("ScrewOneAction after GameOver");
         }
     }
     private void ScrewTwoFunction()
@@ -128,9 +142,15 @@ public class SceneLogic : MonoBehaviour
     private void GameOverFunction()
     {
         Debug.Log("GameOverAction received");
-        clipToPlay.Stop();
-        clipToPlay = SetupAudioSourceFor(PlayerTrigger, GameOver);
-        clipToPlay.Play();
-        gameState = 5;
+
+        if (mineExploded.Equals(0))
+        {
+            clipToPlay.Stop();
+            clipToPlay = SetupAudioSourceFor(PlayerTrigger, GameOver);
+            clipToPlay.Play();
+            mineExploded = 1;
+            gameState = 5;
+        }
+        
     }
 }
