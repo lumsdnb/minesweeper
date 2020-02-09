@@ -9,6 +9,9 @@ public class ToolSwitchReceiver : MonoBehaviour
     public GameObject screwdriver;
     public GameObject defaultHand;
     public GameObject securityGear;
+
+    public GameObject worldScrewdriver;
+    public GameObject worldHammer;
     
 
     public void pickTool(int i)
@@ -21,6 +24,8 @@ public class ToolSwitchReceiver : MonoBehaviour
         if (Input.GetAxis("AXIS_12") == 1)
         {
             toolID = 0;
+            worldScrewdriver.SetActive(true);
+            worldHammer.SetActive(true);
         }
         
 
