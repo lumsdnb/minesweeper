@@ -7809,7 +7809,7 @@ PrefabInstance:
         type: 3}
       propertyPath: GameOver
       value: 
-      objectReference: {fileID: 8300000, guid: a41a65c459891d345a0e2c5107c4c858, type: 3}
+      objectReference: {fileID: 8300000, guid: e0c0649635424754bbb8123af5c6496d, type: 3}
     - target: {fileID: 114958296526678812, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
         type: 3}
       propertyPath: WorkbenchPosition
@@ -12666,6 +12666,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400008, guid: 2021672d0eefe204e9f679cc16897235,
     type: 3}
   m_PrefabInstance: {fileID: 1448709049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1454166229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1883483808967216603, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
+    type: 3}
+  m_PrefabInstance: {fileID: 938178599}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1456295245
 PrefabInstance:
@@ -20664,7 +20670,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5634028938507976971}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5634028938507976963
 Transform:
@@ -20678,7 +20684,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5634028938507976971}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5634028938507976965
 Transform:
@@ -20692,7 +20698,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5634028938507976971}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5634028938507976967
 Transform:
@@ -20706,7 +20712,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5634028938507976971}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5634028938507976969
 Transform:
@@ -20716,11 +20722,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5634028938508213545}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5634028938507976971}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5634028938507976971
 Transform:
@@ -20733,11 +20739,11 @@ Transform:
   m_LocalPosition: {x: 0.022444021, y: -0.07148078, z: 0.86181736}
   m_LocalScale: {x: 0.0058504012, y: 0.005850406, z: 0.005850396}
   m_Children:
+  - {fileID: 5634028938507976969}
   - {fileID: 5634028938507976961}
   - {fileID: 5634028938507976963}
   - {fileID: 5634028938507976965}
   - {fileID: 5634028938507976967}
-  - {fileID: 5634028938507976969}
   m_Father: {fileID: 932692989}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -138.71, z: 0}
@@ -20753,7 +20759,7 @@ GameObject:
   - component: {fileID: 5634028938511401249}
   - component: {fileID: 5634028938510402529}
   m_Layer: 0
-  m_Name: Box001
+  m_Name: Faceplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20771,7 +20777,7 @@ GameObject:
   - component: {fileID: 5634028938511401251}
   - component: {fileID: 5634028938510402531}
   m_Layer: 0
-  m_Name: Cylinder01
+  m_Name: Strap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20789,7 +20795,7 @@ GameObject:
   - component: {fileID: 5634028938511401253}
   - component: {fileID: 5634028938510402533}
   m_Layer: 0
-  m_Name: Cylinder02
+  m_Name: Screws
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20807,7 +20813,7 @@ GameObject:
   - component: {fileID: 5634028938511401255}
   - component: {fileID: 5634028938510402535}
   m_Layer: 0
-  m_Name: Cylinder04
+  m_Name: Strap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20827,7 +20833,7 @@ GameObject:
   - component: {fileID: 5634028938508213548}
   - component: {fileID: 5634028938508213546}
   m_Layer: 0
-  m_Name: Sphere03
+  m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20879,6 +20885,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1454166229}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
