@@ -22,6 +22,8 @@ public class SceneLogic : MonoBehaviour
     public AudioClip ScrewOne; //4 //5
     public AudioClip ScrewTwo; // 6
     public AudioClip GameOver; //explosion?
+    public GameObject securityHelmet;
+    public GameObject securityGear;
 
     private AudioSource clipToPlay;
 
@@ -84,6 +86,8 @@ public class SceneLogic : MonoBehaviour
         Debug.Log("SuitOnAction received");
         clipToPlay = SetupAudioSourceFor(PlayerTrigger, SuitOn);
         clipToPlay.Play();
+        securityHelmet.SetActive(true);
+        securityGear.SetActive(false);
 
     }
     private void WorkbenchPositionFunction()
