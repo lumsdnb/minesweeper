@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MinesweeperConfig
   m_EditorClassIdentifier: 
   isCustomProfile: 1
-  targetExperienceScale: 3
+  targetExperienceScale: 2
   enableCameraSystem: 1
   cameraProfile: {fileID: 11400000, guid: 8089ccfdd4494cd38f676f9fc1f46a04, type: 2}
   cameraSystemType:
@@ -53,3 +53,4 @@ MonoBehaviour:
   registeredServiceProvidersProfile: {fileID: 11400000, guid: efbaf6ea540c69f4fb75415a5d145a53,
     type: 2}
   useServiceInspectors: 1
+  renderDepthBuffer: 0
