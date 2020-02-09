@@ -12,6 +12,8 @@ public class ToolSwitchReceiver : MonoBehaviour
 
     public GameObject worldScrewdriver;
     public GameObject worldHammer;
+
+    public GameObject sceneLogic;
     
 
     public void pickTool(int i)
@@ -19,11 +21,24 @@ public class ToolSwitchReceiver : MonoBehaviour
         toolID=i;
     }
 
+    void Start() 
+    {
+        
+    }
     void Update()
     {
+        int state = sceneLogic.GetComponent<SceneLogic>().gameState;
+        if (state > 0)
+        {
+            toolID = 1;
+        }
+        
         if (Input.GetAxis("AXIS_12") == 1)
         {
-            toolID = 0;
+            if (state > 0)
+            {
+                toolID = 1;
+            } else toolID = 0;
             worldScrewdriver.SetActive(true);
             worldHammer.SetActive(true);
         }

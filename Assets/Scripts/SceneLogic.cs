@@ -25,6 +25,8 @@ public class SceneLogic : MonoBehaviour
     public GameObject securityHelmet;
     public GameObject securityGear;
 
+    public int gameState = 0;
+
     private AudioSource clipToPlay;
 
     private int mineStateOneHappened;
@@ -47,14 +49,6 @@ public class SceneLogic : MonoBehaviour
         mineStateOneHappened = 0;
         mineStateTwoHappened = 0;
         mineStateThreeHappened = 0;
-
-
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
 
 
     }
@@ -98,6 +92,7 @@ public class SceneLogic : MonoBehaviour
         securityHelmet.SetActive(true);
         securityGear.SetActive(false);
         checkPos = true;
+        gameState = 1;
     }
     private void WorkbenchPositionFunction()
     {
@@ -105,6 +100,7 @@ public class SceneLogic : MonoBehaviour
         clipToPlay.Stop();
         clipToPlay = SetupAudioSourceFor(PlayerTrigger, WorkbenchPosition);
         clipToPlay.Play();
+        gameState = 2;
     }
     private void ScrewOneFunction()
     {
@@ -114,6 +110,7 @@ public class SceneLogic : MonoBehaviour
         clipToPlay = SetupAudioSourceFor(PlayerTrigger, ScrewOne);
         clipToPlay.Play();
         mineStateOneHappened = 1;
+        gameState = 3;
         }
     }
     private void ScrewTwoFunction()
@@ -125,6 +122,7 @@ public class SceneLogic : MonoBehaviour
             clipToPlay = SetupAudioSourceFor(PlayerTrigger, ScrewTwo);
             clipToPlay.Play();
             mineStateThreeHappened = 1;
+            gameState = 4;
         }
     }
     private void GameOverFunction()
@@ -133,5 +131,6 @@ public class SceneLogic : MonoBehaviour
         clipToPlay.Stop();
         clipToPlay = SetupAudioSourceFor(PlayerTrigger, GameOver);
         clipToPlay.Play();
+        gameState = 5;
     }
 }
