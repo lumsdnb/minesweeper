@@ -24,6 +24,8 @@ public class SceneLogic : MonoBehaviour
     public AudioClip GameOver; //explosion?
     public GameObject securityHelmet;
     public GameObject securityGear;
+    public GameObject controllerLeft;
+    public GameObject securitySuitLeft;
 
     public int gameState = 0;
 
@@ -32,8 +34,6 @@ public class SceneLogic : MonoBehaviour
     private int mineStateOneHappened;
     private int mineStateTwoHappened;
     private int mineStateThreeHappened;
-
-    private bool checkPos = false;
 
     private void Awake()
     {
@@ -68,12 +68,11 @@ public class SceneLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (checkPos==true)
+        if (gameState == 1)
         {
-            if (PlayerTrigger.transform.position.z>=5 && PlayerTrigger.transform.position.x<=1.15)
+            if (PlayerTrigger.transform.position.z>=5 && PlayerTrigger.transform.position.x<=1.14)
             {
-                SceneLogic.WorkbenchPositionAction.Invoke();
-                checkPos = false;    
+                SceneLogic.WorkbenchPositionAction.Invoke(); 
             }
         }
     }
@@ -91,8 +90,9 @@ public class SceneLogic : MonoBehaviour
         clipToPlay.Play();
         securityHelmet.SetActive(true);
         securityGear.SetActive(false);
-        checkPos = true;
         gameState = 1;
+        controllerLeft.SetActive(false);
+        securitySuitLeft.SetActive(true);
     }
     private void WorkbenchPositionFunction()
     {
