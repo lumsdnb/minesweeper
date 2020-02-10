@@ -28,16 +28,21 @@ public class SceneLogic : MonoBehaviour
     public GameObject securitySuitLeft;
     public GameObject rightHandGizmo;
     public GameObject restartScreen;
+    public GameObject workbench;
+    public GameObject mine;
+    public GameObject screwdriver;
+    public GameObject hammer;
 
     public int gameState = 0;
 
     private AudioSource clipToPlay;
 
     private int mineStateOneHappened;
-    private int mineStateTwoHappened;
+    //private int mineStateTwoHappened;
     private int mineStateThreeHappened;
     private int mineExploded;
-    private int weNeedLouderExplosions;
+    private int suitisOn;
+
 
 
     private void Awake()
@@ -52,12 +57,13 @@ public class SceneLogic : MonoBehaviour
         SceneLogic.StartGameAction.Invoke();
 
         mineStateOneHappened = 0;
-        mineStateTwoHappened = 0;
+        //mineStateTwoHappened = 0;
         mineStateThreeHappened = 0;
         mineExploded = 0;
+        suitisOn = 0;
 
 
-}
+    }
 
     private AudioSource SetupAudioSourceFor(GameObject target, AudioClip clip)
     {
@@ -71,6 +77,17 @@ public class SceneLogic : MonoBehaviour
 
         return result;
     }
+    private Outline SetUpOutline(GameObject target, Color32 color, float line)
+    {
+        Outline result = target.AddComponent<Outline>();
+        result.OutlineMode = Outline.Mode.OutlineAll;
+        result.OutlineColor = color;
+        result.OutlineWidth = line;
+        Debug.Log("OutlineConfigured");
+
+
+        return result;
+    }
 
     // Update is called once per frame
     void Update()
@@ -79,7 +96,8 @@ public class SceneLogic : MonoBehaviour
         {
             if (PlayerTrigger.transform.position.z>=5 && PlayerTrigger.transform.position.x<=1.14)
             {
-                SceneLogic.WorkbenchPositionAction.Invoke(); 
+                SceneLogic.WorkbenchPositionAction.Invoke();
+                Destroy(workbench.GetComponent<Outline>());
             }
         }
     }
@@ -88,19 +106,26 @@ public class SceneLogic : MonoBehaviour
         Debug.Log("StartGameAction received");
         clipToPlay = SetupAudioSourceFor(PlayerTrigger, StartGame);
         clipToPlay.Play();
+        SetUpOutline(securityGear, new Color32(0, 200, 255, 255), 10f);
     }
     private void SuitOnFunction()
     {
         Debug.Log("SuitOnAction received");
-        clipToPlay.Stop();
-        clipToPlay = SetupAudioSourceFor(PlayerTrigger, SuitOn);
-        clipToPlay.Play();
-        securityHelmet.SetActive(true);
-        securityGear.SetActive(false);
-        gameState = 1;
-        controllerLeft.SetActive(false);
-        securitySuitLeft.SetActive(true);
-        rightHandGizmo.GetComponent<ToolSwitchReceiver>().pickTool(1);
+        if (suitisOn.Equals(0))
+        {
+            Destroy(securityGear.GetComponent<Outline>());
+            clipToPlay.Stop();
+            clipToPlay = SetupAudioSourceFor(PlayerTrigger, SuitOn);
+            clipToPlay.Play();
+            securityHelmet.SetActive(true);
+            securityGear.SetActive(false);
+            gameState = 1;
+            controllerLeft.SetActive(false);
+            securitySuitLeft.SetActive(true);
+            rightHandGizmo.GetComponent<ToolSwitchReceiver>().pickTool(1);
+            SetUpOutline(workbench, new Color32(0, 200, 255, 255), 10f);
+            suitisOn = 1;
+        }
     }
     private void WorkbenchPositionFunction()
     {
@@ -109,6 +134,8 @@ public class SceneLogic : MonoBehaviour
         clipToPlay = SetupAudioSourceFor(PlayerTrigger, WorkbenchPosition);
         clipToPlay.Play();
         gameState = 2;
+        SetUpOutline(mine, new Color32(0, 200, 255, 255), 5f);
+        SetUpOutline(screwdriver, new Color32(0, 200, 255, 255), 5f);
     }
     private void ScrewOneFunction()
     {
@@ -123,6 +150,8 @@ public class SceneLogic : MonoBehaviour
                 clipToPlay.Play();
                 mineStateOneHappened = 1;
                 gameState = 3;
+                Destroy(screwdriver.GetComponent<Outline>());
+                SetUpOutline(hammer, new Color32(0, 200, 255, 255), 5f);
             }
         }
         if (mineExploded.Equals(1))
@@ -140,6 +169,8 @@ public class SceneLogic : MonoBehaviour
             clipToPlay.Play();
             mineStateThreeHappened = 1;
             gameState = 4;
+            Destroy(mine.GetComponent<Outline>());
+            Destroy(hammer.GetComponent<Outline>());
         }
     }
     private void GameOverFunction()

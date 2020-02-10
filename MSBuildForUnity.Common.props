@@ -2,12 +2,12 @@
   <PropertyGroup>
     <MSBuildForUnityVersion>0.8.3</MSBuildForUnityVersion>
     
-    <MSBuildForUnityGeneratedOutputDirectory>C:\Users\lums\Documents\minesweeper\MSBuild\Projects</MSBuildForUnityGeneratedOutputDirectory>
-    <UnityProjectAssetsPath>C:\Users\lums\Documents\minesweeper\Assets</UnityProjectAssetsPath>
+    <MSBuildForUnityGeneratedOutputDirectory>C:\Users\Nemo\Documents\GitHub\minesweeper\MSBuild\Projects</MSBuildForUnityGeneratedOutputDirectory>
+    <UnityProjectAssetsPath>C:\Users\Nemo\Documents\GitHub\minesweeper\Assets</UnityProjectAssetsPath>
     <MSBuildForUnityDefaultOutputPath>$(UnityProjectAssetsPath)\Dependencies</MSBuildForUnityDefaultOutputPath>
     
-    <UnityCurrentPlatform>WSA</UnityCurrentPlatform>
-    <UnityCurrentTargetFramework>net46</UnityCurrentTargetFramework>
+    <UnityCurrentPlatform>WindowsStandalone64</UnityCurrentPlatform>
+    <UnityCurrentTargetFramework>netstandard2.0</UnityCurrentTargetFramework>
     
     <UnityMajorVersion>2018</UnityMajorVersion>
     <UnityMinorVersion>4</UnityMinorVersion>
