@@ -26,7 +26,7 @@ public class HitThis : MonoBehaviour
         if(other.gameObject.tag == "hammer")
         {
             //are the first 2 screws removed?
-            if (ReferenceScript.mineState < 2)
+            if (ReferenceScript.mineState > 2)
             {
                 if (amtHit<3)
                 {
