@@ -56,7 +56,7 @@ public class AddOutline : MonoBehaviour
         Destroy(Axe.GetComponent<Outline>());
         newColor = new Color32(255, 0, 0, 255);
         LineStrenght = 10f;
-        SetUpOutline(Knife, newColor, LineStrenght);
+        SetUpOutline(Knife, new Color32(255, 0, 0, 255), 10f);
     }
     private void outlineFunction2()
     {
