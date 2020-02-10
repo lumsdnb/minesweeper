@@ -28,11 +28,6 @@ public class ToolSwitchReceiver : MonoBehaviour
     void Update()
     {
         int state = sceneLogic.GetComponent<SceneLogic>().gameState;
-        if (state > 0)
-        {
-            toolID = 1;
-        }
-        
         if (Input.GetAxis("AXIS_12") == 1)
         {
             if (state > 0)

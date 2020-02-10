@@ -26,6 +26,7 @@ public class SceneLogic : MonoBehaviour
     public GameObject securityGear;
     public GameObject controllerLeft;
     public GameObject securitySuitLeft;
+    public GameObject rightHandGizmo;
 
     public int gameState = 0;
 
@@ -98,6 +99,7 @@ public class SceneLogic : MonoBehaviour
         gameState = 1;
         controllerLeft.SetActive(false);
         securitySuitLeft.SetActive(true);
+        rightHandGizmo.GetComponent<ToolSwitchReceiver>().pickTool(1);
     }
     private void WorkbenchPositionFunction()
     {
