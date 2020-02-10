@@ -27,6 +27,7 @@ public class SceneLogic : MonoBehaviour
     public GameObject controllerLeft;
     public GameObject securitySuitLeft;
     public GameObject rightHandGizmo;
+    public GameObject restartScreen;
 
     public int gameState = 0;
 
@@ -152,7 +153,14 @@ public class SceneLogic : MonoBehaviour
             clipToPlay.Play();
             mineExploded = 1;
             gameState = 5;
+            StartCoroutine(waitForRestart());
         }
         
     }
+    IEnumerator waitForRestart()
+    {
+        yield return new WaitForSeconds(4);
+        restartScreen.SetActive(true);
+    }
+
 }
