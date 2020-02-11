@@ -26,7 +26,17 @@ public class ScrewThisPhysics : MonoBehaviour
         {
             //screw falls out after x degrees of unscrewing
             gameObject.GetComponent<Rigidbody>().useGravity = true;
-            ReferenceScript.setState(screwNum);
+            switch (screwNum)
+            {
+                case 1:
+                    ReferenceScript.setState(1);
+                    break;
+                case 2:
+                    ReferenceScript.setState(2);
+                    break;
+                default:
+                    break;
+            }
         }
 
         // Debug.Log(transform.localEulerAngles.y);

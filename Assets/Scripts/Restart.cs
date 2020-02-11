@@ -1,15 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; //So you can use SceneManager
+using UnityEngine.SceneManagement;
 
-public class restart : MonoBehaviour
+public class Restart : MonoBehaviour
 {
  
- void Update () {
-     if (Input.GetKeyDown("r")) { //If you press R
-                                  //SceneManager.LoadScene("MainScene"); //Load scene called Game
-           
-        }
- }
+    public void restartGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+
+    }
 }

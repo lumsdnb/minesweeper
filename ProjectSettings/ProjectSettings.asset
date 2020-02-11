@@ -533,7 +533,8 @@ PlayerSettings:
   webGLCompressionFormat: 1
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    14: DOTNETWINRT_PRESENT
   platformArchitecture:
     iOS: 1
   scriptingBackend: {}

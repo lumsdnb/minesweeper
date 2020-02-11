@@ -132,6 +132,7 @@ MonoBehaviour:
   oneHandRotationModeFar: 6
   releaseBehavior: 3
   constraintOnRotation: 0
+  useLocalSpaceForConstraint: 0
   constraintOnMovement: 0
   smoothingActive: 1
   smoothingAmountOneHandManip: 0.001
@@ -267,7 +268,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.019999998, y: 0.019999994, z: 0.019999996}
-  m_Center: {x: -7.275958e-12, y: 0.0000000037252903, z: 7.275958e-12}
+  m_Center: {x: 7.275958e-12, y: 0.0000000037252903, z: 7.275958e-12}
 --- !u!1 &4278953320950598135
 GameObject:
   m_ObjectHideFlags: 0

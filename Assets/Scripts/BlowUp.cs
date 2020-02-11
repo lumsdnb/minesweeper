@@ -15,7 +15,10 @@ public class BlowUp : MonoBehaviour
     {
         if (other.gameObject.tag == "notTheRightTool")
         {
+            if (theMine.GetComponent<MineScript>().mineState != 3)
+            {   
             BlowUpTheMine();
+            }
 
         }
     }

@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//check if rubber hammer was used to hit side of mine
-//TODO: check velocity?
-
 public class HitThis : MonoBehaviour
 {
     public GameObject fuse;
     public GameObject spring;
     public GameObject nail;
     public int amtHit = 0;
-    MineScript ReferenceScript;
-    GameObject Mine;
+    private MineScript ReferenceScript;
+    public GameObject Mine;
+    private bool wasTouching = false;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         Mine = GameObject.FindWithTag("mineMainObject");
@@ -26,14 +24,22 @@ public class HitThis : MonoBehaviour
         if(other.gameObject.tag == "hammer")
         {
             //are the first 2 screws removed?
-            if (ReferenceScript.mineState > 2)
+            if (ReferenceScript.mineState >= 2)
             {
-                if (amtHit<3)
+                if (amtHit < 3 && wasTouching == false)
                 {
-                    amtHit++;          
+                    amtHit++;    
+                    wasTouching = true;
                 }
             }
         } 
+    }
+
+    void OnTriggerExit(Collider other) {
+        if (other.gameObject.tag == "hammer")
+        {
+            wasTouching = false;
+        }
     }
 
     void Update()
@@ -41,7 +47,7 @@ public class HitThis : MonoBehaviour
         switch (amtHit)
         {
         case 1:
-            Debug.Log("first hit");
+            // Debug.Log("first hit");
             nail.GetComponent<Rigidbody>().useGravity = true;
             break;
         case 2:
@@ -50,10 +56,11 @@ public class HitThis : MonoBehaviour
             spring.GetComponent<Rigidbody>().useGravity = true;
             break;
         case 3:
-            Debug.Log("third hit");
+            // Debug.Log("third hit");
             nail.GetComponent<Rigidbody>().useGravity = true;
             spring.GetComponent<Rigidbody>().useGravity = true;
             fuse.GetComponent<Rigidbody>().useGravity = true;
+            ReferenceScript.setState(3);
             break;
         default:
             break;

@@ -61,8 +61,6 @@ public class SceneLogic : MonoBehaviour
         mineStateThreeHappened = 0;
         mineExploded = 0;
         suitisOn = 0;
-
-
     }
 
     private AudioSource SetupAudioSourceFor(GameObject target, AudioClip clip)
