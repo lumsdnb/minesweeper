@@ -90,9 +90,10 @@ public class SceneLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //workbench position trigger
         if (gameState == 1)
         {
-            if (PlayerTrigger.transform.position.z>=5 && PlayerTrigger.transform.position.x<=1.14)
+            if (PlayerTrigger.transform.position.z>=5 && PlayerTrigger.transform.position.x <= 1.2)
             {
                 SceneLogic.WorkbenchPositionAction.Invoke();
                 Destroy(workbench.GetComponent<Outline>());
