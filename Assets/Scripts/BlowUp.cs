@@ -9,6 +9,7 @@ public class BlowUp : MonoBehaviour
     public Collider boomCollider;
 
     public ParticleSystem ps;
+    public GameObject ExplosionPrefab;
 
 
     void OnTriggerEnter(Collider other)
@@ -24,6 +25,8 @@ public class BlowUp : MonoBehaviour
         if (theMine.GetComponent<MineScript>().isArmed == true)
         {
             StartCoroutine(BombCoroutine());
+            // GameObject a = Instantiate(ExplosionPrefab) as GameObject;
+
         }
     }
     IEnumerator BombCoroutine()
@@ -32,7 +35,7 @@ public class BlowUp : MonoBehaviour
         SceneLogic.GameOverAction.Invoke();
         boomCollider.enabled = true;
 
-        yield return new WaitForSeconds(0.001F);
+        yield return new WaitForSeconds(1F);
 
         theMine.SetActive(false);
     }

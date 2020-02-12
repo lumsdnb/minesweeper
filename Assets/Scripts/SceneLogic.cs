@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class SceneLogic : MonoBehaviour
 {
@@ -105,7 +106,7 @@ public class SceneLogic : MonoBehaviour
         Debug.Log("StartGameAction received");
         clipToPlay = SetupAudioSourceFor(PlayerTrigger, StartGame);
         clipToPlay.Play();
-        SetUpOutline(securityGear, new Color32(0, 200, 255, 255), 10f);
+        StartCoroutine(waitForFirstInstruction());
     }
     private void SuitOnFunction()
     {
@@ -186,8 +187,15 @@ public class SceneLogic : MonoBehaviour
     }
     IEnumerator waitForRestart()
     {
-        yield return new WaitForSeconds(4);
-        restartScreen.SetActive(true);
+        yield return new WaitForSeconds(3);
+        // restartScreen.SetActive(true);
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(1);
+    }
+
+    IEnumerator waitForFirstInstruction()
+    {
+        yield return new WaitForSeconds(53);
+        SetUpOutline(securityGear, new Color32(0, 200, 255, 255), 10f);
     }
 
 }

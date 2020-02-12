@@ -18560,6 +18560,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.003
       objectReference: {fileID: 0}
+    - target: {fileID: 3903186155665932839, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
+        type: 3}
+      propertyPath: m_Radius
+      value: 4.35
+      objectReference: {fileID: 0}
     - target: {fileID: 6515459680248557012, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
         type: 3}
       propertyPath: profiles.Array.data[0].Target
@@ -27801,6 +27806,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529246013680052501, guid: 03940032cedeb7343a538917903830d0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1529246013680052499, guid: 03940032cedeb7343a538917903830d0,
         type: 3}

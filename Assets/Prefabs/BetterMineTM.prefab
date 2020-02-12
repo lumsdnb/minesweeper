@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 600976272}
   - component: {fileID: 600976271}
   m_Layer: 0
-  m_Name: wrong tool trigger
+  m_Name: Explosion Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,6 +61,8 @@ MonoBehaviour:
   theMine: {fileID: 2946129645605433177}
   boomCollider: {fileID: 3903186155665932839}
   ps: {fileID: 6033065363570408816}
+  ExplosionPrefab: {fileID: 5411224728556907580, guid: a4c14bdc6fba33e44ab225f398c029a0,
+    type: 3}
 --- !u!1 &867148111486546880
 GameObject:
   m_ObjectHideFlags: 0
