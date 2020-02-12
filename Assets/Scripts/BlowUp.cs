@@ -6,6 +6,8 @@ public class BlowUp : MonoBehaviour
 {
 
     public GameObject theMine;
+    public Rigidbody rb;
+    public float thrust = 1.0f;
     public Collider boomCollider;
 
     public ParticleSystem ps;
@@ -22,18 +24,14 @@ public class BlowUp : MonoBehaviour
 
     public void BlowUpTheMine()
     {
+
         if (theMine.GetComponent<MineScript>().isArmed == true)
         {
+            rb.AddForce(transform.up * thrust);
             ps.Play();
             SceneLogic.GameOverAction.Invoke();
             boomCollider.enabled = true;
             ModelToDestroy.SetActive(false);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
