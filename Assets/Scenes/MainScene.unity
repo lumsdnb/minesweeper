@@ -1582,6 +1582,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f303da1d25c959e40b82bdb74435059a, type: 3}
+--- !u!1 &177334416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3666136977042191787, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1571087775}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &184711688
 GameObject:
   m_ObjectHideFlags: 0
@@ -7783,6 +7789,16 @@ PrefabInstance:
       propertyPath: hammer
       value: 
       objectReference: {fileID: 1947471736}
+    - target: {fileID: 114958296526678812, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
+        type: 3}
+      propertyPath: firstScrew
+      value: 
+      objectReference: {fileID: 177334416}
+    - target: {fileID: 114958296526678812, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
+        type: 3}
+      propertyPath: secondScrew
+      value: 
+      objectReference: {fileID: 1006003179}
     - target: {fileID: 5224856890425985659, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10822,6 +10838,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400148, guid: 1eb5d40e436fc8d4f8e846400269b334,
     type: 3}
   m_PrefabInstance: {fileID: 1133693247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1006003179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1767079533183843903, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1571087775}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1007863335 stripped
 GameObject:

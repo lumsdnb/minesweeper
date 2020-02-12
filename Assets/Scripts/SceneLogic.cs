@@ -33,6 +33,8 @@ public class SceneLogic : MonoBehaviour
     public GameObject mine;
     public GameObject screwdriver;
     public GameObject hammer;
+    public GameObject firstScrew;
+    public GameObject secondScrew;
 
     public int gameState = 0;
 
@@ -135,7 +137,8 @@ public class SceneLogic : MonoBehaviour
         clipToPlay.Play();
         gameState = 2;
         SetUpOutline(mine, new Color32(0, 200, 255, 255), 5f);
-        SetUpOutline(screwdriver, new Color32(0, 200, 255, 255), 5f);
+        SetUpOutline(screwdriver, new Color32(150, 0, 255, 255), 5f);
+        SetUpOutline(firstScrew, new Color32(150, 0, 255, 255), 5f);
     }
     private void ScrewOneFunction()
     {
@@ -151,7 +154,9 @@ public class SceneLogic : MonoBehaviour
                 mineStateOneHappened = 1;
                 gameState = 3;
                 Destroy(screwdriver.GetComponent<Outline>());
+                Destroy(firstScrew.GetComponent<Outline>());
                 SetUpOutline(hammer, new Color32(0, 200, 255, 255), 5f);
+                SetUpOutline(secondScrew, new Color32(150, 0, 255, 255), 5f);
             }
         }
         if (mineExploded.Equals(1))
@@ -169,6 +174,7 @@ public class SceneLogic : MonoBehaviour
         gameState = 4;
         Destroy(mine.GetComponent<Outline>());
         Destroy(hammer.GetComponent<Outline>());
+        Destroy(secondScrew.GetComponent<Outline>());
     }
     private void GameOverFunction()
     {
