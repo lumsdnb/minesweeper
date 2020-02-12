@@ -155,6 +155,7 @@ public class SceneLogic : MonoBehaviour
                 gameState = 3;
                 Destroy(screwdriver.GetComponent<Outline>());
                 Destroy(firstScrew.GetComponent<Outline>());
+                Destroy(mine.GetComponent<Outline>());
                 SetUpOutline(hammer, new Color32(0, 200, 255, 255), 5f);
                 SetUpOutline(secondScrew, new Color32(150, 0, 255, 255), 5f);
             }
