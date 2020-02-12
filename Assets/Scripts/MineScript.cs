@@ -9,7 +9,8 @@ public class MineScript : MonoBehaviour
     public GameObject screw1;
     public GameObject screw2;
     public GameObject firstFuse;
-    public int mineState=0;
+    public int mineState = 0;
+    public bool isArmed = true;
 
     
 

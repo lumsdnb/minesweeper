@@ -8,26 +8,21 @@ public class HitThis : MonoBehaviour
     public GameObject spring;
     public GameObject nail;
     public int amtHit = 0;
-    private MineScript ReferenceScript;
+    public MineScript ReferenceScript;
     public GameObject Mine;
     private bool wasTouching = false;
-
-
-    void Start()
-    {
-        Mine = GameObject.FindWithTag("mineMainObject");
-        ReferenceScript = Mine.GetComponent<MineScript>();
-    }
 
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "hammer")
         {
             //are the first 2 screws removed?
-            if (ReferenceScript.mineState >= 2)
+            if (ReferenceScript.mineState == 2)
             {
+                Debug.Log("minestate equals 2");
                 if (amtHit < 3 && wasTouching == false)
                 {
+                    Debug.Log("amtHit less than 3");
                     amtHit++;    
                     wasTouching = true;
                 }
@@ -47,20 +42,21 @@ public class HitThis : MonoBehaviour
         switch (amtHit)
         {
         case 1:
-            // Debug.Log("first hit");
-            nail.GetComponent<Rigidbody>().useGravity = true;
+            Debug.Log("first hit");
+            spring.GetComponent<Rigidbody>().useGravity = true;
             break;
         case 2:
             Debug.Log("second hit");
-            nail.GetComponent<Rigidbody>().useGravity = true;
             spring.GetComponent<Rigidbody>().useGravity = true;
+            nail.GetComponent<Rigidbody>().useGravity = true;
             break;
         case 3:
-            // Debug.Log("third hit");
+            Debug.Log("third hit");
             nail.GetComponent<Rigidbody>().useGravity = true;
             spring.GetComponent<Rigidbody>().useGravity = true;
             fuse.GetComponent<Rigidbody>().useGravity = true;
-            ReferenceScript.setState(3);
+            SceneLogic.ScrewTwoAction.Invoke();
+            amtHit = 4;
             break;
         default:
             break;

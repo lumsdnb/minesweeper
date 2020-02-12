@@ -8,7 +8,7 @@ public class Restart : MonoBehaviour
  
     public void restartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(0);
 
     }
 }

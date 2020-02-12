@@ -162,15 +162,12 @@ public class SceneLogic : MonoBehaviour
     {
         Debug.Log("ScrewTwoAction received");
         clipToPlay.Stop();
-        if (mineStateThreeHappened.Equals(0))
-        {
-            clipToPlay = SetupAudioSourceFor(PlayerTrigger, ScrewTwo);
-            clipToPlay.Play();
-            mineStateThreeHappened = 1;
-            gameState = 4;
-            Destroy(mine.GetComponent<Outline>());
-            Destroy(hammer.GetComponent<Outline>());
-        }
+        clipToPlay = SetupAudioSourceFor(PlayerTrigger, ScrewTwo);
+        clipToPlay.Play();
+        mineStateThreeHappened = 1;
+        gameState = 4;
+        Destroy(mine.GetComponent<Outline>());
+        Destroy(hammer.GetComponent<Outline>());
     }
     private void GameOverFunction()
     {

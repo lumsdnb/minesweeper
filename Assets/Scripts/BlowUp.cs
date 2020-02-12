@@ -15,27 +15,24 @@ public class BlowUp : MonoBehaviour
     {
         if (other.gameObject.tag == "notTheRightTool")
         {
-            if (theMine.GetComponent<MineScript>().mineState != 3)
-            {   
             BlowUpTheMine();
-            }
-
         }
     }
 
     public void BlowUpTheMine()
     {
-        StartCoroutine(BombCoroutine());
+        if (theMine.GetComponent<MineScript>().isArmed == true)
+        {
+            StartCoroutine(BombCoroutine());
+        }
     }
     IEnumerator BombCoroutine()
     {
         ps.Play();
         SceneLogic.GameOverAction.Invoke();
         boomCollider.enabled = true;
-        
 
-        
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.001F);
 
         theMine.SetActive(false);
     }
