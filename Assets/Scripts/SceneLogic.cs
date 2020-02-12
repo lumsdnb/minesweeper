@@ -188,8 +188,8 @@ public class SceneLogic : MonoBehaviour
     IEnumerator waitForRestart()
     {
         yield return new WaitForSeconds(3);
-        // restartScreen.SetActive(true);
-        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(1);
+        restartScreen.SetActive(true);
+        securityHelmet.SetActive(true);
     }
 
     IEnumerator waitForFirstInstruction()

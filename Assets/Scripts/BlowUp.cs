@@ -9,7 +9,7 @@ public class BlowUp : MonoBehaviour
     public Collider boomCollider;
 
     public ParticleSystem ps;
-    public GameObject ExplosionPrefab;
+    public GameObject ModelToDestroy;
 
 
     void OnTriggerEnter(Collider other)
@@ -24,20 +24,11 @@ public class BlowUp : MonoBehaviour
     {
         if (theMine.GetComponent<MineScript>().isArmed == true)
         {
-            StartCoroutine(BombCoroutine());
-            // GameObject a = Instantiate(ExplosionPrefab) as GameObject;
-
+            ps.Play();
+            SceneLogic.GameOverAction.Invoke();
+            boomCollider.enabled = true;
+            ModelToDestroy.SetActive(false);
         }
-    }
-    IEnumerator BombCoroutine()
-    {
-        ps.Play();
-        SceneLogic.GameOverAction.Invoke();
-        boomCollider.enabled = true;
-
-        yield return new WaitForSeconds(1F);
-
-        theMine.SetActive(false);
     }
 
     // Update is called once per frame
