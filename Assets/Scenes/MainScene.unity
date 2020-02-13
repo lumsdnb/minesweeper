@@ -17478,6 +17478,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 938178599}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1454166230 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114958296526678812, guid: 1f2b453cba03abe419b68ac83fb5cdfa,
+    type: 3}
+  m_PrefabInstance: {fileID: 938178599}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454166229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1a55aa4fda1e448961a2ff0d87fdd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1461563479
 GameObject:
   m_ObjectHideFlags: 0
@@ -19762,7 +19774,7 @@ PrefabInstance:
     - target: {fileID: 3830333632078028838, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
         type: 3}
       propertyPath: m_Radius
-      value: 0.38
+      value: 1.97
       objectReference: {fileID: 0}
     - target: {fileID: 3830333632078028838, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
         type: 3}
@@ -19783,6 +19795,36 @@ PrefabInstance:
         type: 3}
       propertyPath: radius
       value: 7000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889782638102186684, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
+        type: 3}
+      propertyPath: OnManipulationStarted.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889782638102186684, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
+        type: 3}
+      propertyPath: OnManipulationStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889782638102186684, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
+        type: 3}
+      propertyPath: OnManipulationStarted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889782638102186684, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
+        type: 3}
+      propertyPath: OnManipulationStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1454166230}
+    - target: {fileID: 7889782638102186684, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
+        type: 3}
+      propertyPath: OnManipulationStarted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: disableMineGlow
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889782638102186684, guid: 0265cfddbe04f9b42aa923f32e4a84e4,
+        type: 3}
+      propertyPath: OnManipulationStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0265cfddbe04f9b42aa923f32e4a84e4, type: 3}

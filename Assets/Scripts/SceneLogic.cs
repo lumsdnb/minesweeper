@@ -190,7 +190,6 @@ public class SceneLogic : MonoBehaviour
             gameState = 5;
             StartCoroutine(waitForRestart());
         }
-        
     }
     IEnumerator waitForRestart()
     {
@@ -203,6 +202,11 @@ public class SceneLogic : MonoBehaviour
     {
         yield return new WaitForSeconds(53);
         SetUpOutline(securityGear, new Color32(0, 200, 255, 255), 10f);
+    }
+
+    public void disableMineGlow()
+    {
+        Destroy(mine.GetComponent<Outline>());
     }
 
 }
