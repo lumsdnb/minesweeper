@@ -1,3 +1,1 @@
-# Mine-defuser
-Unity project for danger group
-![](splash.png)
+![Mine Defusing Workshop (VR Edition)](splash.png)
