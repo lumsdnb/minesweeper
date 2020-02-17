@@ -107,7 +107,7 @@ public class SceneLogic : MonoBehaviour
     {
         Debug.Log("StartGameAction received");
         clipToPlay = SetupAudioSourceFor(PlayerTrigger, StartGame);
-        // clipToPlay.Play();
+        clipToPlay.Play();
         StartCoroutine(waitForFirstInstruction());
     }
     private void SuitOnFunction()
