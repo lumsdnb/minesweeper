@@ -9,7 +9,7 @@
         }
     ],
   "dependencies": {
-    "com.microsoft.msbuildforunity": "0.8.3",
+    "com.microsoft.msbuildforunity": "0.9.1-20200131.14",
     "com.unity.ads": "2.0.8",
     "com.unity.analytics": "3.2.2",
     "com.unity.collab-proxy": "1.2.15",
